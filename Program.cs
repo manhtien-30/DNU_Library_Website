@@ -1,7 +1,11 @@
+using System.Net.NetworkInformation;
+using Umbraco.Community.BlockPreview.Extensions;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
     .AddBackOffice()
+    .AddBlockPreviewOptions()
     .AddWebsite()
     .AddDeliveryApi()
     .AddComposers()
