@@ -1,4 +1,5 @@
 ﻿@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Web.Common.PublishedModels
 @using Umbraco.Extensions
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
 
@@ -8,7 +9,8 @@
 
 <div class="grid">
     @foreach (IPublishedContent varWebpage in UmbracoContext!.PublishedRequest!.PublishedContent!.Children<IPublishedContent>()!) //LOOP THROUGH LINKS
-    {
+    {   
+        
         <div class="g-col-12 g-col-md-6 g-col-lg-4">
             <div class="card h-100 shadow">
                 @if (varWebpage.Value<IPublishedContent>("pageThumbnail") != null)
@@ -18,6 +20,7 @@
                 }
                 @*<div class="card-header">
             <h5 class="card-title text-center pt-2"><a class="nav-link stretched-link" href="@varWebpage.Url()">@varWebpage.Value("pageTitle")</a></h5>
+    using Umbraco.Cms.Web.Common.PublishedModels;
             </div>*@
                 <div class="card-body">
                     <h5 class="card-title pb-1"><a class="nav-link stretched-link" href="@varWebpage.Url()">@varWebpage.Value("pageTitle")</a></h5>

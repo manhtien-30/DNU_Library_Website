@@ -1,6 +1,7 @@
 @using UmbNav.Core.Extensions
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Web.Common.PublishedModels.SiteSettings>
 @using Microsoft.AspNetCore.Http
+@using Umbraco.Cms.Core.Models.PublishedContent
 @inject IHttpContextAccessor HttpContextAccessor
 @inject Umbraco.Cms.Core.Web.IUmbracoContextFactory UmbracoContextFactory
 
@@ -10,17 +11,33 @@
     var umbracoContext = UmbracoContextFactory.EnsureUmbracoContext();
     var currentUrl = HttpContextAccessor.HttpContext!.Request.Path.ToString();
     var currentPage = umbracoContext.UmbracoContext.Content!.GetByRoute(currentUrl);
+    IPublishedContent thisPage = UmbracoContext!.PublishedRequest!.PublishedContent!;
+
 }
-<header class="screen--header sticky-top shadow-b bg-light pb-1">
-    <nav class="container-xxl navbar navbar-nav navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="@Model.Logo?.GetCropUrl())" />
+<div class="container-fluid">
+    <div class="col-12 col-xl-9 navbar-nav ms-auto mb-2 mb-lg-0 justify-content-between align-items-center flex-sm-row">
+        <div class="nav-item">
+            <a class="navbar-brand ">
+                <img src="@Model.Logo?.GetCropUrl())" alt="" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-start" id="navbarNav">
+        </div>
+        <div class="nav-item">
+            <h1 class="display-4 text-break text-primary    ">@thisPage.Value("pagetitle")</h1>
+        </div>
+        <div class="nav-tiem">
+            <button class="btn btn-outline-success" type="submit">dang nhap</button>
+        </div>
+    </div>
+</div>
+<header class="screen--header sticky-top shadow-b bg-light pb-1">
+
+    <nav class="container-xxl navbar navbar-nav navbar-expand-lg" >
+        <div class="container-fluid">
+            <div class="offcanvas offcanvas-start" id="navbarNav" >
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">In this site</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -1,0 +1,32 @@
+@using Umbraco.Extensions
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+@{
+    Layout = "_Layout_Features.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="col-md-7 mx-auto" bis_skin_checked="1">
+        <div class="input-group" bis_skin_checked="1">
+            <input type="text" class="form-control py-3" placeholder="Nhập sách cần tìm" aria-label="Nhập sách cần tìm"
+                aria-describedby="button-addon2" data-validation-required-message="Vui lòng nhập trường này"
+                data-validation-email-message="Vui lòng nhập sách cần tìm">
+            <button type="submit" id="btnSave" class="btn btn-primary col-sm-3 col-md-2">
+                <i class="fa fa-spin fa-spinner margin-r-5" style="display: none"></i>
+                Tim kiem
+            </button>
+        </div>
+    </div>
+</div>
+
+@* <form>
+<div class="mb-3">
+<label for="exampleFormControlInput1" class="form-label">Email address</label>
+<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form> *@
