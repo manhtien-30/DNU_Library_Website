@@ -12,9 +12,9 @@
         }
     ],
     "javascript": [
-        "~/App_Plugins/TopicDashboard/topic.controller.js"
+        "~/App_Plugins/ManagementSection/TopicDashboard/topic.controller.js"
     ],
     "css": [
-        "~/App_Plugins/"
+        "~/App_Plugins/ManagementSection/TopicDashboard/"
     ]
 }
