@@ -1,0 +1,19 @@
+{
+  "javascript": [
+    "~/App_Plugins/",
+    "~/App_Plugins/"
+  ],
+  "css": [
+    "~/App_Plugins/"
+  ],
+  "dashboards": [
+    {
+      "alias": "ArticleDashboard",
+      "sections": [
+        "ManagementSection"
+      ],
+      "view": "~/App_Plugins/ManagementSection/ArticleDashboard/articleDashboard.html",
+      "css" : "",
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+    "dashboards":  [
+        {
+            "alias": "TopicDashboard",
+            "view":  "/App_Plugins/ManagementSection/TopicDashboard/topicDashboard.html",
+            "sections":  [ "ManagementSection" ],
+            "weight": -10,
+            "access": [
+                { "deny": "translator" },
+                { "grant": "admin" }
+            ]
+        }
+    ],
+    "javascript": [
+        "~/App_Plugins/TopicDashboard/topic.controller.js"
+    ],
+    "css": [
+        "~/App_Plugins/"
+    ]
+}
