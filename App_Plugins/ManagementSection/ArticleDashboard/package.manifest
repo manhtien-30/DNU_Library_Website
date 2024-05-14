@@ -1,7 +1,6 @@
 {
   "javascript": [
-    "~/App_Plugins/",
-    "~/App_Plugins/"
+    "~/App_Plugins/ManagementSection/TopicDashboard/article.controller.js",
   ],
   "css": [
     "~/App_Plugins/"
@@ -13,7 +12,6 @@
         "ManagementSection"
       ],
       "view": "~/App_Plugins/ManagementSection/ArticleDashboard/articleDashboard.html",
-      "css" : "",
     }
   ]
 }

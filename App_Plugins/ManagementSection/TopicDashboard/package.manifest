@@ -2,7 +2,7 @@
     "dashboards":  [
         {
             "alias": "TopicDashboard",
-            "view":  "/App_Plugins/ManagementSection/TopicDashboard/topicDashboard.html",
+            "view":  "~/App_Plugins/ManagementSection/TopicDashboard/topicDashboard.html",
             "sections":  [ "ManagementSection" ],
             "weight": -10,
             "access": [

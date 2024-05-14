@@ -4,5 +4,10 @@
             "alias": "ManagementSection",
             "name": "Management sections"
         }
+    ],
+    "javascript": [
+    "~/App_Plugins/ManagementSection/sections.resource.js",
+    "~/App_Plugins/ManagementSection/backoffice/api/edit.controller.js",
+    "~/App_Plugins/ManagementSection/backoffice/api/delete.controller.js"
     ]
 }
