@@ -1,4 +1,6 @@
-﻿namespace DNU_Library_website.App_Plugins.ManagementSection.TopicTrees
+﻿using DNU_Library_website.Models;
+
+namespace DNU_Library_website.App_Plugins.ManagementSection.TopicTrees
 {
     public class TopicTreeNode
     {
@@ -9,6 +11,7 @@
         public string NodeType { get; }
         public string Path { get; }
         public string RoutePath { get; }
+        public Topic topic;
         public IDictionary<string, object> AdditionalData { get; }
 
         public TopicTreeNode(int id,int parentId,string name){

@@ -26,6 +26,7 @@
             includeProperties: [
                 { alias: "description", header: "Description" },
                 { alias: "author", header: "Author" }
+                
             ]
         };
 
@@ -46,7 +47,7 @@
             return listViewHelper.isSelectedAll(vm.items, vm.selection);
         }
 
-        
+         
         function clickItem(item) {
             listViewHelper.editItem(item);
         }
